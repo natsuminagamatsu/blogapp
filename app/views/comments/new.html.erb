@@ -1,0 +1,9 @@
+<h1>コメント入力<h1/>
+
+<h3>下記よりコメントを入力してください<h3/>
+
+<%= form_tag article_comments_path(params[:article_id]), method: :post do %>
+  <input type="hidden" name="article_id" value="<%= params[:article_id] %>" />
+  <textarea name="input_comment" style="width: 500px; height: 300px;"></textarea><br/>
+  <input type= "submit" value="送信" />
+<% end %>

@@ -1,0 +1,9 @@
+<h1>記事編集<h1/>
+
+<h3>下記より記事を編集してください<h3/>
+
+<%= form_tag article_path(@article.id), method: :patch do %>
+  <input type="text" name="title" value="<%= @article.title %>"  style="width: 500px; height: 30px;" /><br/>
+  <textarea name="body" style="width: 500px; height: 300px;"><%= @article.body %></textarea><br/>
+  <input type= "submit" value="更新" />
+<% end %>

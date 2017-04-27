@@ -1,0 +1,13 @@
+<h1>ログイン</h1>
+
+<h3>下記よりログインしてください<h3/>
+
+<% @error_messages.each do |msg| %>
+  <%= msg %>
+<% end %>
+
+<%= form_tag auth_index_path, method: :post do %>
+  <input type="text" name="email" value="<%= @email %>" style="width: 500px; height: 30px;" placeholder="メールアドレス"/><br/>
+  <input type="password" name="password" style="width: 500px; height: 30px;" placeholder="パスワード"/><br/>
+  <input type= "submit" value="ログイン" />
+<% end %>

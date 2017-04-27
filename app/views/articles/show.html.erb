@@ -1,0 +1,15 @@
+<h2><%= @article.title %></h2>
+<p><%= @article.body %></p>
+
+<h3>コメント一覧</h3>
+<% @article.comments.each do |comment|%>
+  <p><%= comment.user.name %>: <%= comment.contents %></p>
+  <%= link_to "削除", article_comment_path(@article.id, comment.id), method: :delete %>
+<% end %>
+
+<hr/>
+
+<%= link_to "コメントする", new_article_comment_path(@article.id) %>
+<%= link_to "削除", article_path(@article.id), method: :delete %>
+<%= link_to "更新", edit_article_path(@article.id) %>
+<%= link_to "トップへ戻る", root_path %>

@@ -1,0 +1,10 @@
+<h1>新規登録画面</h1>
+
+<h3>下記より新規登録をください<h3/>
+
+<%= form_tag users_path, method: :post do %>
+  <input type="text" name="name" style="width: 500px; height: 30px;" placeholder="名前"/><br/>
+  <input type="text" name="email" style="width: 500px; height: 30px;" placeholder="メールアドレス"/><br/>
+  <input type="text" name="password" style="width: 500px; height: 30px;" placeholder="パスワード"/><br/>
+  <input type= "submit" value="登録" />
+<% end %>
