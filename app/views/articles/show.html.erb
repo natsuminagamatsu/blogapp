@@ -9,6 +9,10 @@
 
 <hr/>
 
+<% unless @current_user.nil? %>
+  <%= link_to "お気に入り登録する", article_favorites_path(@article.id), method: :post %>
+<% end %>
+
 <%= link_to "コメントする", new_article_comment_path(@article.id) %>
 <%= link_to "削除", article_path(@article.id), method: :delete %>
 <%= link_to "更新", edit_article_path(@article.id) %>

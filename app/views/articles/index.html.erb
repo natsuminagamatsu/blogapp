@@ -1,6 +1,7 @@
 <h1>記事</h1>
 <%= link_to "新規作成", new_article_path %>
 <%= link_to "コメント一覧", comments_path %>
+<%= link_to "お気に入り記事一覧", favorites_path%>
   <hr/>
 <% @articles.each do |article| %>
   <p><%= article.created_at %></p>

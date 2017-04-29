@@ -1,0 +1,6 @@
+<h1>お気に入り記事一覧</h1>
+
+<% @current_user.favorites.each do |favorite|%>
+  <h2>タイトル:<%= favorite.article.title %></h2>
+  <h4>本文:<%= favorite.article.body %></h4>
+<% end %>
