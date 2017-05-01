@@ -1,0 +1,26 @@
+<h1>マイページ</h1>
+
+<%= form_for @current_user, method: :patch do |f| %>
+  <label>名前</label><br/>
+  <%= f.text_field :name %><br/>
+
+  <label>メールアドレス</label><br/>
+  <%= f.text_field :email %><br/>
+
+  <label>パスワード</label><br/>
+  <%= f.password_field :password %><br/>
+
+  <label>生年月日</label><br/>
+  <%= f.date_field :birthday %><br/>
+
+  <label>自己紹介</label><br/>
+  <%= f.text_area :bio, size: "60x12" %><br/>
+
+  <label>プロフィール写真</label>
+  <%= f.file_field :pictures %><br/>
+  <% if @current_user.has_photo %>
+  <img src="/uploads/<%= @current_user.id %>.jpg" width="120px"/><br/>
+  <% end %>
+
+  <%= f.submit "更新" %><br/>
+<% end %>

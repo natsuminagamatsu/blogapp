@@ -11,6 +11,7 @@
   <body>
     <% if session.has_key? :user_id %>
       <p><%= @current_user.name %>さんでログイン中</p>
+      <%= link_to "マイページ", edit_user_path(@current_user.id) %>
       <%= link_to "ログアウト", auth_path(@current_user.id), method: :delete %>
     <% else %>
       <%= link_to "新規登録", new_user_path %>

@@ -6,6 +6,12 @@
 <% @articles.each do |article| %>
   <p><%= article.created_at %></p>
   <% author = article.user %>
+  <% if author.has_photo %>
+    <img src="/uploads/<%= author.id %>.jpg" width="40px"/>
+  <% else %>
+    <img src="/no_photo.jpg" width="40px"/>
+  <% end %>
+
   <%= link_to author.name, user_path(author.id) %>
   <h2><%= article.title %></h2>
   <p><%= article.body %></p>
