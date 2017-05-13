@@ -11,5 +11,10 @@ Rails.application.routes.draw do
   resources :users
   resources :auth
   resources :favorites
+
+  namespace :api do
+    resources :articles
+  end
+
   root to: "articles#index"
 end

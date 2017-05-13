@@ -1,3 +1,20 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.article {
+  margin: 10px;
+  padding: 8px;
+  border: 1px silver solid;
+}
+
+#post_form {
+  margin: 10px;
+  padding: 8px;
+  border: 1px silver solid;
+}
+
+#post_form > input[type="submit"] {
+  width: 100px;
+  font-size: 2em;
+}

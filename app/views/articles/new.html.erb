@@ -2,8 +2,10 @@
 
 <h3>下記より記事を作成してください<h3/>
 
-<%= form_tag articles_path, method: :post do %>
-  <input type="text" name="input_title" style="width: 500px; height: 30px;" placeholder="タイトル"/><br/>
-  <textarea name="body" style="width: 500px; height: 300px;"></textarea><br/>
-  <input type= "submit" value="送信" />
-<% end %>
+<!-- <%= form_tag articles_path, method: :post do %> -->
+  <input id="title" type="text" name="input_title" style="width: 500px; height: 30px;" placeholder="タイトル"/><br/>
+  <textarea id="body" name="body" style="width: 500px; height: 300px;"></textarea><br/>
+  <input id="submit" type="submit" value="送信" />
+<!-- <% end %> -->
+
+<ul id="list"></ul>
